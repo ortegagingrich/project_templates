@@ -15,7 +15,13 @@ clobber:
 
 .phony: test
 test:
-	@cd $(TEST_FOLDER)
-	@python $(SRC_FOLDER)/new-project.py $(TEST_LANG) $(TEST_NAME)
-	@cd $(ROOT_DIR)
+	cd $(TEST_FOLDER); \
+	python $(SRC_FOLDER)/new-project.py $(TEST_LANG) $(TEST_NAME)
+	cd $(ROOT_DIR)
+
+
+#print number of lines
+.phony: line_count
+line_count:
+	find $(SRC_FOLDER) -name '*.c' -o -name '*.h' -o -name '*.py' -o -name 'Makefile' | xargs wc -l
 
