@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -z "$SCRIPTS" ] ; then
+	echo "Please set SCRIPTS environment variable"
+	exit 1
+fi
+#TODO: make everything here.
