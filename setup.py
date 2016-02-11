@@ -32,7 +32,7 @@ def __install__():
 			print "Cancelling installation of {}.".format(SCRIPT_NAME)
 			sys.exit(0)
 		else:
-			print "Overwritting previously installed script {}.".format(SCRIPT_NAME)
+			print "Overwriting previously installed script {}.".format(SCRIPT_NAME)
 			__uninstall__()
 	
 	#copy python sources into script directory
