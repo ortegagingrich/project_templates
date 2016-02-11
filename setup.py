@@ -3,8 +3,7 @@ import sys, os, shutil
 
 import git
 
-SCRIPT_NAME = "project_templates"
-EXEC_NAME = "new-project"
+from meta import *
 
 
 def __install__():

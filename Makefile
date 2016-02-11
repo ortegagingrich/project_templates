@@ -6,6 +6,7 @@ TEST_FOLDER=$(ROOT_DIR)/test-dir
 
 TEST_NAME="Project_Test"
 TEST_LANG="C"
+TEST_ARGS=$(TEST_LANG) $(TEST_NAME)
 
 
 .phony: install
@@ -20,13 +21,13 @@ uninstall:
 
 .phony: clobber
 clobber:
+	rm -rf *.pyc
 	find $(TEST_FOLDER)/* -type d -not -iname '.gitignore' | xargs rm -r
-
 
 .phony: test
 test:
 	cd $(TEST_FOLDER); \
-	python $(SRC_FOLDER)/new-project.py $(TEST_LANG) $(TEST_NAME)
+	python $(SRC_FOLDER)/new-project.py $(TEST_ARGS)
 	cd $(ROOT_DIR)
 
 
