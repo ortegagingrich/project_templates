@@ -1,0 +1,8 @@
+This repository contains some scripts for quickly setting up projects according to templates (including generation of makefiles, setting up virtual environments, etc.)  Note that this uses my personal script organization system.  To use it, the environment variable 'SCRIPTS' must be set.  Once this is done, the script can be installed by running
+```
+make install
+```
+in this directory.  Afterwards, a project can be created with the command:
+```
+new-project [language/profile] [project name]
+```
