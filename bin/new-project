@@ -4,4 +4,11 @@ if [ -z "$SCRIPTS" ] ; then
 	echo "Please set SCRIPTS environment variable"
 	exit 1
 fi
-#TODO: make everything here.
+
+
+{
+	python $SCRIPTS/project_templates/new-project.py "$@"
+}||{
+	echo "Installation Broken."
+	echo "Please Reinstall project_templates."
+}

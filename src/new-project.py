@@ -25,6 +25,8 @@ def create_project(name, lang):
 def __create_project__(args):
 	if len(args) != 3:
 		print "Invalid System Arguments."
+		print "Please use the sytax:"
+		print "new-project [language] [project name]"
 		return
 	project_name = args[2]
 	project_lang = args[1]

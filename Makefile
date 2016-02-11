@@ -8,6 +8,16 @@ TEST_NAME="Project_Test"
 TEST_LANG="C"
 
 
+.phony: install
+install:
+	python setup.py install
+
+
+.phony: uninstall
+uninstall:
+	python setup.py uninstall
+
+
 .phony: clobber
 clobber:
 	find $(TEST_FOLDER)/* -type d -not -iname '.gitignore' | xargs rm -r
