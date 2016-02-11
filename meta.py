@@ -1,2 +1,2 @@
 SCRIPT_NAME = "project_templates"
-EXEC_NAME = "new-project"
+EXEC_NAMES = ["new-project",]

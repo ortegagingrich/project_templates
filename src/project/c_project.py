@@ -23,10 +23,13 @@ class C_Project(object):
 		Creates Template Files.
 		Assumes that we are already in the relevant directory
 		"""
+		
 		#first make directory structure
 		rootdir = self.name
 		os.mkdir(rootdir)
 		os.chdir(rootdir)
+		print "Creating C project in {}.".format(os.getcwd())
+		
 		os.mkdir("bin")
 		os.mkdir("src")
 		

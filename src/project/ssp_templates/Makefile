@@ -4,10 +4,7 @@ SRC_FOLDER=$(ROOT_DIR)/src
 BIN_FOLDER=$(ROOT_DIR)/bin
 TEST_FOLDER=$(ROOT_DIR)/test-dir
 
-TEST_NAME="Project_Test"
-TEST_LANG="ssp"
-TEST_OPT="command-1" "command-2" "command-3"
-TEST_ARGS=$(TEST_LANG) $(TEST_NAME) $(TEST_OPT)
+TEST_ARGS={}
 
 
 .phony: install
@@ -28,12 +25,7 @@ clobber:
 .phony: test
 test:
 	cd $(TEST_FOLDER); \
-	python $(SRC_FOLDER)/new-project.py $(TEST_ARGS)
+	python $(SRC_FOLDER)/main.py $(TEST_ARGS)
 	cd $(ROOT_DIR)
 
-
-#print number of lines
-.phony: line_count
-line_count:
-	find $(SRC_FOLDER) -name '*.c' -o -name '*.h' -o -name '*.py' -o -name 'Makefile' | xargs wc -l
 
