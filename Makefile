@@ -5,8 +5,8 @@ BIN_FOLDER=$(ROOT_DIR)/bin
 TEST_FOLDER=$(ROOT_DIR)/test-dir
 
 TEST_NAME="Project_Test"
-TEST_LANG="ssp"
-TEST_OPT="command-1" "command-2" "command-3"
+TEST_LANG="cpp"
+TEST_OPT=
 TEST_ARGS=$(TEST_LANG) $(TEST_NAME) $(TEST_OPT)
 
 

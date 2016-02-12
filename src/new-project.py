@@ -4,6 +4,7 @@ Contains basic code for creating new projects.
 import sys
 
 from project.c_project import C_Project
+from project.cpp_project import CPP_Project
 from project.ssp_project import SSP_Project
 
 
@@ -15,6 +16,8 @@ def create_project(name, lang, opt = None):
 	new_project = None
 	if lang.lower() in ['c']:
 		new_project = C_Project(name)
+	elif lang.lower() in ['cpp', 'c++']:
+		new_project = CPP_Project(name)
 	elif lang.lower() in ['ssp', 'system-script-python']:
 		new_project = SSP_Project(name, exec_names = opt)
 	#TODO: Add more elifs
@@ -35,6 +38,8 @@ def __create_project__(args):
 	project_lang = args[1]
 	if len(args) > 3:
 		opt = args[3:]
+	else:
+		opt = None
 	create_project(project_name, project_lang, opt)
 
 
