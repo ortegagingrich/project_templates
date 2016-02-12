@@ -87,7 +87,7 @@ def __git_status__():
 
 if __name__ == '__main__':
 	if(len(sys.argv) < 2):
-		print "Please specify a setup command.  (e.g. 'install' or 'uninstall'"
+		print "Please specify a setup command.  (e.g. 'install' or 'uninstall')"
 	cmd = sys.argv[1]
 	
 	if cmd == 'install':
