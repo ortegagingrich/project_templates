@@ -1,8 +1,6 @@
 """ Install Script """
 import sys, os, shutil
 
-import git
-
 from meta import *
 
 
@@ -11,11 +9,6 @@ def __install__():
 	Runs the actual installation process.
 	"""
 	print "Preparing to install {} script.".format(SCRIPT_NAME)
-	
-	#make sure git is fine
-	if not __git_status__():
-		print "Cannot Install.  There are uncommitted changes."
-		sys.exit(1)
 	
 	#make sure there is a place to install the script to.
 	if not "SCRIPTS" in os.environ:
@@ -75,14 +68,6 @@ def __is_already_installed__(script_dir):
 	
 	return False
 
-
-def __git_status__():
-	"""
-	Checks to see if there are uncommitted changes.
-	"""
-	#TODO: For now, just always returns true.
-	
-	return True
 
 
 if __name__ == '__main__':
